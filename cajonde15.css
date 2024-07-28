@@ -119,3 +119,8 @@ footer {
 	margin-top: 50px;
 	color: #222;
 }
+
+footer p {
+	font-size: x-large;
+    font-weight: 500;
+}
