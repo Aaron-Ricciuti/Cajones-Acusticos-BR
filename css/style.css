@@ -9,7 +9,7 @@ body{
 }
 
 header{
-    background-color: #260a0af5;
+    background-color: #3a0d0df7;
     margin: auto;
     display: flex;
     justify-content: space-around;
@@ -78,6 +78,18 @@ nav ul li a{
 
 h2 {
     text-align: center;
+    margin: 28px;
+}
+
+.fa-solid{
+    width: 50px;
+    position: fixed;
+    right: 19px;
+    bottom: 100px;
+    cursor: pointer;
+    font-size: xxx-large;
+    color: #00000099;
+    z-index: 1000;
 }
 
 .logo-wsp {
@@ -89,8 +101,6 @@ h2 {
     filter: drop-shadow(1px 3px 6px black);
     z-index: 1000;
 }
-
-
 
 .services-img {
     width: 100%;
@@ -117,15 +127,15 @@ h2 {
 }
 
 .text-img-cajones {
-    background-image: url('./img/cajon.png');
+    background-image: url('../img/cajon.png');
 }
 
 .text-img-audio {
-    background-image: url('./img/audio.jpeg');
+    background-image: url('../img/audio.jpeg');
 }
 
 .text-img-rackeras {
-    background-image: url('./img/rack.jpg');
+    background-image: url('../img/rack.jpg');
 }
 
 .btn-img  {
@@ -239,10 +249,11 @@ div.card .card-body {
 }
 
 #about-us {
-    background-color: antiquewhite;
+    background-color: #e1d7d7;
     border-radius: 40px;
     padding: 30px;
     margin-top: 5%;
+    box-shadow: inset 0px -1px 20px 5px darkred;
 }
 
 .about-container {
@@ -256,12 +267,14 @@ div.card .card-body {
 }
 
 .about-container p {
-    padding: 3%;
+    margin-inline: 2%;
+    padding: 4%;
+    font-family: "Montserrat", sans-serif;
 }
 
 .about-container hr {
     border: none;
-    background: #bf0000c7;
+    background: #000000;
     height: 2px;
     margin-inline: 14%;
 }
@@ -392,34 +405,14 @@ div.card .card-body {
     color: #ffffff;
 }
 
-.follow-container {
-    background-color: #3c3c3c;
-    height: 20vh;
+.select-container{
+    margin-top: 28px;
 }
 
-.flex-follow {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2%;
-    color: #ffffdb;
-    font-size: 21px;
-}
-
-.icon {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-}
-
-footer {
-    background-color: #3c3c3c;
-    color: #fff;
-    text-align: center;
-    padding: 5px 0;
-    width: 100%;
-    bottom: 0;
+.select-container select{
+    height: 20px;
+    width: 107px;
+    box-shadow: 2px 1px 2px 2px black;
 }
 
 .container {
@@ -444,8 +437,8 @@ input[type="radio"]{
 
 .label-container:before {
     content: "";
-    height: 16px;
-    width: 16px;
+    height: 12px;
+    width: 12px;
     border: 2px solid #000000a6;
     border-radius: 50%;
     margin-right: 20px;
@@ -459,7 +452,48 @@ input[type="radio"]:checked + label:before {
     background-color: rgb(1, 168, 1);
 }
 
-@media screen and (min-width: 360px) and (max-width: 720px) { 
+.follow-container {
+    background-color: #3c3c3c;
+    height: 20vh;
+}
+
+.flex-follow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffdb;
+    font-size: 21px;
+}
+
+.icon {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.fa-brands{
+    color: #ffffdb;
+}
+
+footer {
+    background-color: #3c3c3c;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    width: 100%;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 0rem;
+}
+
+footer p{
+    font-family: sans-serif;
+    margin-top: 60px;
+}
+
+
+@media screen and (min-width: 360px) and (max-width: 768px) { 
     
     header {
         align-items: center;
@@ -512,12 +546,15 @@ input[type="radio"]:checked + label:before {
 
     .galeria-img-container {
         width: 100%;
-
     }
 
     .about-container {
         flex-direction: column;
         flex-wrap: wrap;
+    }
+
+    .about-container img{
+        width: 80%;
     }
 
     .contact-right-side {
@@ -546,7 +583,7 @@ input[type="radio"]:checked + label:before {
     }
 }
 
-@media screen and (min-width: 721px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
     
     header {
         display: flex;
@@ -598,7 +635,7 @@ input[type="radio"]:checked + label:before {
     }
 }
 
-@media screen and (min-width: 721px) and (max-width: 1279px) {
+@media screen and (min-width: 769px) and (max-width: 1279px) {
     header {
         display: flex;
         flex-direction: column;

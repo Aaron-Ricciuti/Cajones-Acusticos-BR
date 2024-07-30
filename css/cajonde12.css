@@ -34,22 +34,13 @@ main {
 	display: flex;
 	gap: 30px;
 	margin-bottom: 80px;
+	margin: 0;
 }
 
 #carouselExampleCaptions {
 	background-color: #f7f7f9;
 	flex: 1;
 	height: 50%;
-}
-
-.d-block, .w-200 {
-	width: 100%;
-    height: 81vh;
-    object-fit: contain;
-}
-
-.carousel, .slide {
-	background-color: rgb(221 221 221) !important;
 }
 
 .container-info-product {
@@ -134,4 +125,43 @@ footer p {
 	font-size: 22px;
     font-weight: 500;
 	margin-bottom: 0rem;
+}
+
+@media screen and (min-width: 360px) and (max-width: 1080px) {
+
+	.container-title {
+		font-size: 20px;	
+	}
+
+	main{
+		flex-direction: column;
+	}
+
+	.container-info-product {
+		margin: 2px;
+	}
+
+	.container-description{
+		padding: 8px 0px 0px 8px;
+		border-bottom: none;
+	}
+
+	.container-price span {
+		margin-inline: 7px;
+	}
+
+	.container-social{
+		margin-top: 67px;
+		border-bottom: none;
+	}
+
+	.container-additional-information{
+		padding: 0px;
+		border-bottom: none;
+	}
+
+	footer{
+        padding: 20px;
+        margin-top: 0px;
+	}
 }
