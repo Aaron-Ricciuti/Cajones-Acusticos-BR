@@ -28,6 +28,7 @@
                  <li><a href="#product">Productos</a></li>
                  <li><a href="#about-us">Sobre nosotros</a></li>
                  <li><a href="#contact">Contacto</a></li>
+                 <li><a href="#Comentario">Comentarios</a></li>
             </ul>
         </nav>
         <a href="#start"><i class="fa-solid fa-chevron-up"></i></a>
@@ -196,6 +197,65 @@
                 </form>
             </div>
         </section>
+        <section id="Comentario">
+            <h2>Comentarios</h2>
+    
+            <div id="comentario-container">
+                <!-- Aqui dentro se añadirán las cards nuevas -->
+            </div>
+    
+            <div id="comentario-form-container">
+                <form id="comentario-form">
+                    <h4>Añadir comentario</h4>
+                <div class="comentario-flex-1">
+                    <label for="comentario-title">Producto:</label>
+                    <input type="text" id="comentario-title" name="comentario-title" required />
+                    <br />
+                    <label for="comentario-description">Opinión:</label>
+                    <textarea type="text" id="comentario-description" name="comentario-description" required></textarea>
+                    <br />
+                    <label for="comentario-image">Url de imagen:</label>
+                    <input 
+                      type="url" 
+                      name="comentario-image"
+                      id="comentario-image"
+                      placeholder="https://picsum.photos/200"
+                    />
+                </div>
+                    <br />
+                    <h4>Personalización</h4>
+                    <div class="comentario-flex-2"></div>
+                    <label for="comentario-bg-color">Color de fondo</label>
+                    <input 
+                    type="color" 
+                    name="comentario-bg-color" 
+                    id="comentario-bg-color" 
+                    value="#ffffff"
+                    />
+                    <br>
+                    <label for="comentario-border-color">Color del borde</label>
+                    <input 
+                    type="color" 
+                    id="comentario-border-color" 
+                    name="comentario-border-color"
+                    value="#000000"
+                    />
+                    <br />
+                </div>
+                <div class="comentario-flex-3">
+                    <p>Calificación:<p>
+                    <div class="rating">
+                        <input class="input-star" type="radio" name="star" id="star5" value="5"><label for="star5">★</label>
+                        <input class="input-star" type="radio" name="star" id="star4" value="4"><label for="star4">★</label>
+                        <input class="input-star" type="radio" name="star" id="star3" value="3"><label for="star3">★</label>
+                        <input class="input-star" type="radio" name="star" id="star2" value="2"><label for="star2">★</label>
+                        <input class="input-star" type="radio" name="star" id="star1" value="1"><label for="star1">★</label>
+                    </div>
+                    <button class="comentario-button" type="submit">Añadir comentario</button>
+                </div>
+                </form>
+            </div>
+        </section>
         <section class="follow-container">
             <div class="flex-follow">
                <h2>Seguinos en</h2>
@@ -211,5 +271,6 @@
             <p>Copyright © 2024 Aaron Ricciuti</p>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

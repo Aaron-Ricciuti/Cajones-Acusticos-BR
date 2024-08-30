@@ -33,6 +33,7 @@ header h1{
 }
 
 input{
+    border: 2px solid #000000;
     margin: 20px;
     padding: 6px;
     width: 100px;
@@ -40,7 +41,6 @@ input{
     max-width: 400px;
     height: 23px;
     background: white;
-    border: none;
 }
 
 button{
@@ -298,6 +298,7 @@ div.card .card-body {
     margin: 10%;
     margin-top: 5%;
     font-family: "Roboto", sans-serif;
+    margin-block-end: auto;
 }
 
 .contact-img-wrapper {
@@ -463,6 +464,7 @@ input[type="radio"]:checked + label:before {
     align-items: center;
     color: #ffffdb;
     font-size: 21px;
+    margin-top: 30px;
 }
 
 .icon {
@@ -491,6 +493,132 @@ footer p{
     font-family: sans-serif;
     margin-top: 60px;
 }
+
+/* Seccion DOM */
+
+.comentario-flex-1, .comentario-flex-2, .comentario-flex-3{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+#comentario{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.comentario{
+    border: 2px solid white;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    width: 20%;
+}
+
+.comentario img{
+    width: 100%;
+    height: auto;
+}
+
+.star-color{
+    color: gold;
+    font-size: 26px;
+}
+
+#comentario-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.comentario-content{
+    margin-top: 10px;
+    color: black ;
+    text-align: center;
+}
+
+#comentario-form-container{
+    margin: 10px;
+}
+
+#comentario-form{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#comentario-description{
+    border: 2px solid #000000;
+    padding: 4px;
+    height: 60px;
+    width: 18%;
+    margin: 10px;
+}
+
+#comentario-description:valid, #comentario-title:valid, #comentario-image:valid, #comentario-bg-color:valid, #comentario-border-color:valid{
+    border-color: green;
+}
+
+#comentario-title:invalid, #comentario-description:invalid, #comentario-image:invalid, #comentario-bg-color:invalid, #comentario-border-color:invalid{
+    border: red;
+    box-shadow: 0px 0px 2px 1px #ff0000;
+}
+
+
+#comentario-border-color, #comentario-bg-color{
+    padding: 0px;
+    min-width: 0px;
+    max-width: 77px;
+    height: 28px;
+    border: outset;
+}
+
+.comentario-button{
+    cursor: pointer;
+    height: 35px;
+    width: 84px;
+    border: none;
+    transition: .3s linear;
+}
+
+.comentario-button:hover{
+    background-color: green;
+    box-shadow: 0 0 5px green, 0 0 25px green, 0 0;
+}
+
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 2rem;
+    color: gray;
+    cursor: pointer;
+}
+
+.rating input:checked ~ label {
+    color: gold;
+}
+.rating input:hover ~ label {
+    color: gold;
+}
+
 
 
 @media screen and (min-width: 360px) and (max-width: 768px) { 
@@ -581,7 +709,41 @@ footer p{
     .follow-container {
         height: 19vh;
     }
+
+    .comentario-flex-1, .comentario-flex-2, .comentario-flex-3 {
+        flex-direction: column;
+    }
+
+    #comentario-description {
+        max-width: 90%;
+        min-width: 262px;
+    }
+
+    input {
+        margin: 10px;
+        max-width: 50%;
+    }
+
+    .comentario-flex-3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    }
+
+    .comentario{
+        width: 50%;
+    }
 }
+
+@media screen and (min-width: 480px) and (max-width: 768px){
+    #comentario-form{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        }
+    }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     
@@ -627,11 +789,19 @@ footer p{
 
     .galeria-img-container {
         width: 100%;
-
     }
 
     .contact-title {
         font-size: 40px;
+    }
+
+    #comentario-description {
+        max-width: 90%;
+        min-width: 262px;
+    }
+
+    .comentario-flex-1, .comentario-flex-2, .comentario-flex-3 {
+        flex-direction: column;
     }
 }
 
@@ -645,7 +815,23 @@ footer p{
     nav ul {
         flex-direction: row;
         margin-block: 18px;
-    margin-top: 6px;
+        margin-top: 6px;
     }
 
+    .comentario{
+        width: 40%;
+    }
+
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1160px){
+    .comentario-flex-1, .comentario-flex-2, .comentario-flex-3 {
+        flex-direction: column;
+    }
+    
+    #comentario-description {
+        max-width: 90%;
+        min-width: 262px;
+    }
+    
 }
