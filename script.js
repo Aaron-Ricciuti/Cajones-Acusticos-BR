@@ -11,12 +11,16 @@ document
       "https://picsum.photos/200";
     const bgColor = document.getElementById("comentario-bg-color").value;
     const borderColor = document.getElementById("comentario-border-color").value;
-    const rating = document.querySelector('input[name="star"]:checked').value;
+    // Obtener la calificación seleccionada
+    const selectedRating = document.querySelector('input[name="star"]:checked');
 
-if (rating === null) {
-    alert("Por favor, selecciona una calificación.");
-    return; // Detiene la ejecución si no hay calificación seleccionada
-}
+    // Verificar si se ha seleccionado una calificación
+    if (selectedRating === null) {
+        alert("Por favor, selecciona una calificación.");
+        return; // Detiene la ejecución si no hay calificación seleccionada
+    }
+
+    const rating = selectedRating.value;
 
     //Mostrar por consola los valores del fomrulario
     console.log({
@@ -32,10 +36,10 @@ if (rating === null) {
     const cardContainer = document.getElementById("comentario-container");
     const newCard = document.createElement("div");
     newCard.className = "comentario";
+    newCard.className = "comentario bounce";
     newCard.style.backgroundColor = bgColor;
     newCard.style.borderColor = borderColor;
     
-
     //Maquetar la card
     newCard.innerHTML = `
          <img src="${imageUrl}" alt="comentario Image">
@@ -51,8 +55,5 @@ if (rating === null) {
 
     //Limpiar campos del formulario
     document.getElementById("comentario-form").reset();
-
-
-
 });
 

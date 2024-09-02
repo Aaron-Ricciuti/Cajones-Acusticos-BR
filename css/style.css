@@ -619,7 +619,21 @@ footer p{
     color: gold;
 }
 
+.text-white{
+    color: white;
+}
 
+/* Efecto de la nueva card*/
+@keyframes bounce {
+    0% { transform: scale(0.2); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+  
+  .comentario.bounce {
+    animation: bounce 1.5s;
+}
+  
 
 @media screen and (min-width: 360px) and (max-width: 768px) { 
     
