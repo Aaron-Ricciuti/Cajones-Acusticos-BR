@@ -35,8 +35,7 @@ document
     //Crear nueva card
     const cardContainer = document.getElementById("comentario-container");
     const newCard = document.createElement("div");
-    newCard.className = "comentario";
-    newCard.className = "comentario bounce";
+    newCard.classList.add("comentario", "bounce");
     newCard.style.backgroundColor = bgColor;
     newCard.style.borderColor = borderColor;
     

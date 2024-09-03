@@ -5,7 +5,7 @@
 
 body{
     line-height: 1.6;
-    font-family: "Bona Nova SC", serif;
+    font-family: "Roboto", sans-serif;
 }
 
 header{
@@ -17,7 +17,8 @@ header{
     flex-wrap: wrap;
 }
 
-header h1{  
+header h1{ 
+    font-family: "Bona Nova SC", serif; 
     color: rgb(207, 63, 63); 
     margin-top: 8px;
 }
@@ -77,6 +78,7 @@ nav ul li a{
 }
 
 h2 {
+    font-family: "Bona Nova SC", serif;
     text-align: center;
     margin: 28px;
 }
@@ -161,6 +163,7 @@ h2 {
 }
 
 .card-container {
+    font-family: "Bona Nova SC", serif;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -630,7 +633,7 @@ footer p{
     100% { transform: scale(1); }
 }
   
-  .comentario.bounce {
+.comentario.bounce {
     animation: bounce 1.5s;
 }
   
